@@ -37,7 +37,7 @@ endif (WITH_PYTHON)
 include_directories(../include ../include/nxweb ${EXTRA_INCLUDES})
 
 #set(CMAKE_C_FLAGS ${CMAKE_C_FLAGS} "-pthread -O2 -g")
-add_compile_options(-pthread)
+add_compile_options(-pthread -Wno-implicit-function-declaration -Wno-return-mismatch)
 
 
 add_library(nxweb_so SHARED ${LIB_SOURCE_FILES})

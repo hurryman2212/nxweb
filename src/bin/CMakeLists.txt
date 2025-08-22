@@ -6,7 +6,7 @@ set(EXE_SOURCE_FILES main.c)
 
 include_directories(../include ${EXTRA_INCLUDES})
 
-add_compile_options(-pthread)
+add_compile_options(-pthread -Wno-implicit-function-declaration)
 
 add_executable(nxweb_exe ${EXE_SOURCE_FILES})
 target_link_libraries(nxweb_exe nxweb_so pthread ${EXTRA_LIBS})
